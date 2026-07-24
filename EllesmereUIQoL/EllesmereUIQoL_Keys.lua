@@ -315,7 +315,7 @@ local function AcquireRow(i)
     tpBtn:SetScript("OnEnter", function()
         local sid = tpBtn._spellID
         if not sid then return end
-        local known = IsPlayerSpell(sid)
+        local known = C_SpellBook.IsSpellKnown(sid)
         if known then
             if EG then r._dungeonFS:SetTextColor(EG.r, EG.g, EG.b, 1) end
             local cdInfo = C_Spell.GetSpellCooldown(sid)

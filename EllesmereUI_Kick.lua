@@ -36,7 +36,7 @@ local function RefreshKickAbility()
             if known or petKnown then
                 activeKickSpell = spellId
             end
-        elseif IsSpellKnown and IsSpellKnown(spellId) then
+        elseif C_SpellBook.IsSpellKnown and C_SpellBook.IsSpellKnown(spellId) then
             activeKickSpell = spellId
         end
     end
